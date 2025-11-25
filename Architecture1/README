@@ -1,1 +1,26 @@
-adkoawjd
+🖥️ Architettura degli Elaboratori 1
+
+This folder contains notes, exercises, and resources for Computer Architecture 1, part of the first-year Computer Science curriculum.
+
+Topics Covered
+
+Number representation (binary, hexadecimal, two’s complement)
+
+Boolean algebra and logic circuits
+
+Combinational and sequential logic
+
+CPU architecture and datapath
+
+Instruction Set Architecture (ISA)
+
+Memory hierarchy (cache, RAM, virtual memory)
+
+Input/Output and bus systems
+
+Basic assembly programming concepts
+
+Usage
+
+These notes are intended for personal study and revision.
+Refer to the official course material and textbooks for complete accuracy.
