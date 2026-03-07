@@ -34,6 +34,7 @@ Each folder contains:
 ## 🧰 Tools Used
 
 - Xournal++ (on linux)
+- Nebo (on Windows)
 
 ---
 
