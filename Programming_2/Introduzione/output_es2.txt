@@ -1,0 +1,42 @@
+Mettendo Verdi come parente:
+
+    Nome:	Luigi
+ Cognome:	Rossi
+ Parente?	NO  
+*****
+
+    Nome:	Roberto
+ Cognome:	Verdi
+ Parente?	SI  
+*****
+
+    Nome:	Andrea
+ Cognome:	Bianchi
+ Parente?	NO  
+*****
+
+    Nome:	Luigi
+ Cognome:	Neri
+ Parente?	NO  
+*****
+
+    Nome:	Alessia
+ Cognome:	Rossi
+ Parente?	NO  
+*****
+
+    Nome:	Giovanni
+ Cognome:	Rossi
+ Parente?	NO  
+*****
+
+    Nome:	Marco
+ Cognome:	Verdi
+ Parente?	SI  
+*****
+
+    Nome:	Giuseppe
+ Cognome:	Rossi
+ Parente?	NO  
+*****
+
