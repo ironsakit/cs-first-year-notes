@@ -9,7 +9,7 @@
 
 /* Strutture user-defined */
 typedef struct{  // Con typedef possiamo definire un nuovo nome di un tipo di dato sia user-defined che "primitivo"
-  char *titolo;  // puntatore a char che successivamente allocherÚ
+  char *titolo;  // puntatore a char che successivamente allocher√≤
   char *autore;
   int anno_pubblicazione;
 } Libro;  // Struttura che descrive un libro
@@ -20,7 +20,7 @@ typedef struct{
   int numero_libri;  // Quanti libri ho nella liberia
 } Libreria;
 
-/* Qui la funzione Ë void perchË ho gi‡ un puntatore al puntatore di libri (Ë proprio la libreria) perciÚ posso subito allocare memoria puntando al puntatore libri */
+/* Qui la funzione √® void perch√® ho gi√† un puntatore al puntatore di libri (√® proprio la libreria) perci√≤ posso subito allocare memoria puntando al puntatore libri */
 void alloca_Libreria(Libreria *libreria, size_t size){
   Libro *tmp = (Libro *) calloc(size, sizeof(Libro));  // creo lo spazio minimo per contenere 5 libri (mi assicuro che siano vuoti con calloc)
   if(tmp != NULL){
@@ -57,10 +57,10 @@ char *alloca_Stringa(size_t size){
   return (char *) calloc(size, sizeof(char));
 }
 
-/* Uso un doppio puntatore, perchË se avessi passato solo (char *) alla funzione avrei passato una copia del puntatore non quello originale e sarebbe rimasto tutto all'interno del recordi di attivazione della funzione rialloca_stringa*/
+/* Uso un doppio puntatore, perch√® se avessi passato solo (char *) alla funzione avrei passato una copia del puntatore non quello originale e sarebbe rimasto tutto all'interno del recordi di attivazione della funzione rialloca_stringa*/
 int rialloca_stringa(char **s, size_t size_nuova){
   char *tmp = (char *)realloc(*s, sizeof(char) * size_nuova);  // Rialloco la stringa s con una nuova dimensione
-  if(tmp != NULL){  // Se l'operazione Ë andata a buon fine realloc resituisce il puntatore alla nuova stringa
+  if(tmp != NULL){  // Se l'operazione √® andata a buon fine realloc resituisce il puntatore alla nuova stringa
     *s = tmp;  // Quindi possiamo tranquillamente puntare a quello locazione di memoria
     return 1;
   }
@@ -72,7 +72,7 @@ char* scrivi(){
   size_t i = 0, len = SIZE_MINIMA_STRINGA;
   char *s = alloca_Stringa(len);  // Alloco spazio minimo per la stringa
 
-  if(s == NULL){  // Controllo se la malloc Ë andata a buon fine
+  if(s == NULL){  // Controllo se la malloc √® andata a buon fine
     printf("ERRORE ALLOCAZIONE STRINGA");
     exit(1);
   }
@@ -104,7 +104,7 @@ void Choice(char *c){
     if(*c != 'n' && *c != 'N' && *c != 'y' && *c != 'Y'){
       printf("Errore...\n");
     }
-    liberaBufferInput();  // Libero il buffer di input (Magari lo scanf prende il '\n' del printf di prima oppure una funzione dopo prende quello stesso '\n')
+    liberaBufferInput();  // Libero il buffer di input (per sicurezza)
   }while(*c != 'n' && *c != 'N' && *c != 'y' && *c != 'Y');
 }
 
@@ -142,7 +142,7 @@ void assegnaLibri(Libreria *libreria){
       libreria->numero_libri++;  // Aumento il numero di libri attualemnte nella libreria
       
     }else{
-      if(!rialloca_libreria(libreria, libreria->dimensione + OFFSET_LIBRI)){ // SennÚ aggiungo spazio
+      if(!rialloca_libreria(libreria, libreria->dimensione + OFFSET_LIBRI)){ // Senn√≤ aggiungo spazio
         printf("ERRORE ALLOCAZIONE LIBRERIA");
         exit(2);
       }
@@ -172,3 +172,4 @@ int main(){
 
   return 0;
 }
+
