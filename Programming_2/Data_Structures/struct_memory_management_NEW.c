@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define PI 3.14
 #define SIZE_MINIMA_LIBRO 5
 #define OFFSET_LIBRI 5
 #define SIZE_MINIMA_STRINGA 20
@@ -172,4 +171,5 @@ int main(){
 
   return 0;
 }
+
 
