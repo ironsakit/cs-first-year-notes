@@ -36,7 +36,7 @@ Each folder contains:
 
 ---
 
-## 4) Academic Year
+## Academic Year
 **2025 – 2026**
 
 ---
