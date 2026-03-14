@@ -7,7 +7,7 @@ This repository contains organized materials for each subject I’m currently st
 
 ---
 
-## 📚 Subjects
+## Subjects
 
 - **Analysis I**  
   Topics: limits, derivatives, integrals, and the fundamentals of real analysis.  
@@ -23,20 +23,20 @@ This repository contains organized materials for each subject I’m currently st
 
 ---
 
-## 🧠 How to Use
+## How to Use
 
 Each folder contains:
 - **Notes** – summaries, theorems, and key concepts.  
 - **Exercises** – practice problems and their solutions.  
 
-## 🧰 Tools Used
+## Tools Used
 
 - Xournal++ (on linux)
 - Nebo (on Windows)
 
 ---
 
-## 📅 Academic Year
+## Academic Year
 **2025 – 2026**
 
 ---
@@ -47,6 +47,6 @@ Feel free to explore and use them as a reference — but always verify with offi
 
 ---
 
-## 🧑‍💻 Author
+## Author
 **Mattia Ferro**  
 *Computer Science Student – First Year*
