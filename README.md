@@ -41,12 +41,12 @@ Each folder contains:
 
 ---
 
-## 5) ⚠️ Disclaimer
+## ⚠️ Disclaimer
 These notes are for **personal study purposes**.  
 Feel free to explore and use them as a reference — but always verify with official course material.
 
 ---
 
-## 6) Author
+## Author
 **Mattia Ferro**  
 *Computer Science Student – First Year*
