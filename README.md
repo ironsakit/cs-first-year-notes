@@ -1,7 +1,5 @@
 # 📘 Computer Science – First Year Notes
 
-[![Made with ❤️](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)](#)
-[![Language](https://img.shields.io/badge/Language-English-blue)](#)
 [![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)](#)
 
 Welcome to my collection of notes and study materials from the **first year** of my Computer Science degree.  
