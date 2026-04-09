@@ -67,6 +67,8 @@ TreeNode *shuntingYard(const char *expression);
 void read_reverse_polish_notation(TreeNode *tree);
 void read_human_notation(TreeNode *tree);
 
+void freeTree(TreeNode *tree);
+
 int main(void)
 {
 
@@ -77,7 +79,17 @@ int main(void)
     printf("Reverse Polish Notation: ");
     read_reverse_polish_notation(tree);
 
+    freeTree(tree);
+
     return 0;
+}
+
+void freeTree(TreeNode *tree)
+{
+    if (tree == NULL) return;
+    freeTree(tree->left);
+    freeTree(tree->right);
+    free(tree);
 }
 
 // In order to read a reverse polish notation from a tree
