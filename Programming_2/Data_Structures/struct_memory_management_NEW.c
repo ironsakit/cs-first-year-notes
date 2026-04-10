@@ -125,13 +125,13 @@ void assegnaLibri(Libreria *libreria){
       char *line = NULL;
       int anno = 0;
       do{
-	printf("Anno di pubblicazione:\n");
-	line = scrivi();
-	anno = atoi(line);
-	if(anno == 0){
-	  printf("Errore.\n");
-	}
-	free(line);
+		printf("Anno di pubblicazione:\n");
+		line = scrivi();
+		anno = atoi(line);
+		if(anno == 0){
+		  printf("Errore.\n");
+		}
+		free(line);
       }while(anno == 0);
       libreria->libri[i].anno_pubblicazione = anno;
 
