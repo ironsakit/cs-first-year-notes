@@ -67,29 +67,43 @@ TreeNode *shuntingYard(const char *expression);
 void read_reverse_polish_notation(TreeNode *tree);
 void read_human_notation(TreeNode *tree);
 
-void freeTree(TreeNode *tree);
+float result(const TreeNode *tree);
 
 int main(void)
 {
 
-    TreeNode *tree = shuntingYard("((A + B) * (C - D)) / E");
+    TreeNode *tree = shuntingYard("((1 + 2) * (5 - 4)) / 2");
     printf("Human Notation: ");
     read_human_notation(tree);
     printf("\n");
     printf("Reverse Polish Notation: ");
     read_reverse_polish_notation(tree);
 
-    freeTree(tree);
+    printf("\nThe result is: %.2f", result(tree));
 
     return 0;
 }
 
-void freeTree(TreeNode *tree)
+float result(const TreeNode *tree)
 {
-    if (tree == NULL) return;
-    freeTree(tree->left);
-    freeTree(tree->right);
-    free(tree);
+	if(tree == NULL) exit(1);
+	if(tree->left == NULL && tree->right == NULL) return (float)(tree->data - '0'); // If it has no leaf it's an operand
+
+    const float left = result(tree->left), right = result(tree->right);
+
+	switch (tree->data)
+    {
+	    case '+': return left + right;
+	    case '-': return left - right;
+	    case '*': return left * right;
+	    case '/':
+	        if (right != 0) return left / right;
+	        printf("Division by zero");
+	        exit(1);
+	    default:
+	        printf("Unknown operator %c", tree->data);
+	        exit(1);
+	}
 }
 
 // In order to read a reverse polish notation from a tree
@@ -122,7 +136,7 @@ TreeNode *shuntingYard(const char *expression)
     for (int i = 0; expression[i] != '\0'; i++)
     {
         if (expression[i] == ' ') continue;
-        if (isalpha(expression[i])) pushTreeStack(&treeStack, createTreeNode(expression[i]));  // 1)
+        if (isalnum(expression[i])) pushTreeStack(&treeStack, createTreeNode(expression[i]));  // 1)
         else if (expression[i] == '(') pushOperatorStack(&opStack, expression[i]);  // 2)
         else if (expression[i] == ')')  // 3)
         {
