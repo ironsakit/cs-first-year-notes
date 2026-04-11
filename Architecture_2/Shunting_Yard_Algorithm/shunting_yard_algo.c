@@ -71,7 +71,6 @@ float result(const TreeNode *tree);
 
 int main(void)
 {
-
     TreeNode *tree = shuntingYard("((1 + 2) * (5 - 4)) / 2");
     printf("Human Notation: ");
     read_human_notation(tree);
@@ -130,29 +129,29 @@ void read_human_notation(TreeNode *tree)
 
 TreeNode *shuntingYard(const char *expression)
 {
-    OperatorStack *opStack = NULL;
-    TreeStack *treeStack = NULL;
+    OperatorStack *Texas = NULL;
+    TreeStack *California = NULL;
 
     for (int i = 0; expression[i] != '\0'; i++)
     {
         if (expression[i] == ' ') continue;
-        if (isalnum(expression[i])) pushTreeStack(&treeStack, createTreeNode(expression[i]));  // 1)
-        else if (expression[i] == '(') pushOperatorStack(&opStack, expression[i]);  // 2)
+        if (isalnum(expression[i])) pushTreeStack(&California, createTreeNode(expression[i]));  // 1)
+        else if (expression[i] == '(') pushOperatorStack(&Texas, expression[i]);  // 2)
         else if (expression[i] == ')')  // 3)
         {
-            while (peekOperatorStack(opStack) != '(') createTree(&treeStack, &opStack);
-            popOperatorStack(&opStack);
+            while (peekOperatorStack(Texas) != '(') createTree(&California, &Texas);
+            popOperatorStack(&Texas);
         }else
         {   // 4)
-            while (peekOperatorStack(opStack) != '\0' && peekOperatorStack(opStack) != '(' && getOpStrenght(peekOperatorStack(opStack)) >= getOpStrenght(expression[i]))
+            while (peekOperatorStack(Texas) != '\0' && peekOperatorStack(Texas) != '(' && getOpStrenght(peekOperatorStack(Texas)) >= getOpStrenght(expression[i]))
             {
-                createTree(&treeStack, &opStack);
+                createTree(&California, &Texas);
             }
-            pushOperatorStack(&opStack, expression[i]);
+            pushOperatorStack(&Texas, expression[i]);
         }
     }
-    while (peekOperatorStack(opStack) != '\0') createTree(&treeStack, &opStack);
-    return popTreeStack(&treeStack);  // The last parent node
+    while (peekOperatorStack(Texas) != '\0') createTree(&California, &Texas);
+    return popTreeStack(&California);  // The last parent node
 }
 
 int getOpStrenght(DATA data)
