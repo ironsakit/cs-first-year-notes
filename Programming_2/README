@@ -1,1 +1,46 @@
+# Esercizi in C: Elaborazione Stringhe e File I/O
 
+Benvenuto in questa repository! Questo progetto contiene una serie di appunti ed esercizi pratici sviluppati per consolidare le basi della programmazione in linguaggio C, con un focus particolare sulla manipolazione delle stringhe e l'interazione con il file system.
+
+## Prerequisiti
+
+Per poter comprendere, compilare e modificare il codice presente in questo progetto, è necessario avere una conoscenza di base dei seguenti argomenti in C:
+
+* **Sintassi di base e Variabili:** Dichiarazione e utilizzo di tipi di dato fondamentali (`int`, `char`, `float`).
+* **Vettori (Array):** Creazione, indicizzazione e iterazione sugli elementi di un array (es. caricamento dati tramite ciclo `for`).
+* **Funzioni e Scope:** Strutturazione del codice in funzioni (con e senza valore di ritorno/parametri di input) e comprensione della visibilità delle variabili (locali vs globali).
+* **Puntatori e Passaggio di Parametri:** Comprensione della differenza tra passaggio per valore e passaggio per riferimento, utilizzando gli operatori indirizzo (`&`) e deferenziazione (`*`).
+* **Manipolazione delle Stringhe:** Utilizzo della libreria `<string.h>` e delle funzioni principali come `strcpy` (copia), `strlen` (lunghezza) e `strcmp` (confronto).
+* **Gestione dei File:** Utilizzo dei puntatori a `FILE`, apertura/chiusura file (`fopen`, `fclose`), e lettura/scrittura formattata su file di testo (`fscanf`, `fprintf`).
+
+**Strumenti richiesti:**
+* Un compilatore C (es. `gcc`).
+* Un editor di testo o IDE (es. Visual Studio Code, CLion, Code::Blocks).
+
+---
+
+## Descrizione degli Esercizi Finali
+
+La parte pratica del progetto si conclude con due esercizi che mettono insieme l'uso delle stringhe e la lettura/scrittura su file di testo.
+
+### 1. Conteggio delle vocali nei cognomi (`vocali.c`)
+Questo esercizio legge un file di input chiamato `cognomi.txt` contenente un elenco di cognomi. Per ogni cognome, il programma invoca una funzione che conta il numero di vocali presenti. I risultati vengono poi salvati in un nuovo file generato dal programma, `output_vocali.txt`, formattato in questo modo:
+
+    Cognome: Rossi
+    Vocali: 2
+    *****
+    Cognome: Bianchi
+    Vocali: 3
+    *****
+
+### 2. Ricerca dei parenti (`parenti.c`)
+Questo esercizio lavora su un file di testo chiamato `nomi_cognomi.txt`, contenente sia il nome che il cognome di diverse persone. L'obiettivo del programma è identificare chi fa parte della "famiglia" di Mario Rossi, ovvero trovare tutti gli individui nel file che hanno "Rossi" come cognome. L'esito della ricerca viene scritto su un file chiamato `parenti.txt` con la seguente struttura:
+
+    Nome: Luigi
+    Cognome: Rossi
+    Parente? SI
+    ****
+    Nome: Roberto
+    Cognome: Verdi
+    Parente? N
+    ****
