@@ -1,6 +1,6 @@
 # 📘 Computer Science – First Year Notes
 
-[![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)](#)
+[![Status](https://img.shields.io/badge/Status-All%20Done-Green)](#)
 
 Welcome to my collection of notes and study materials from the **first year** of my Computer Science degree.  
 This repository contains organized materials for each subject I’m currently studying.
